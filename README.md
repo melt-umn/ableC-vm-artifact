@@ -35,3 +35,13 @@ Stops the VM without deleting it like `destroy` does.
 
 Then `~/VirtualBox VMs/ableC_artifact_vm` is the VM. TODO: Figure out how to distribute this.
 
+TODO
+----
+
+* [ ] Get all the AbleC extensions we want in here
+* [ ] Configure a default password for users starting the VM via virtual box instead of vagrant (i.e. the artifact reviewers)
+* [ ] Add a pre-login message ("login as ubuntu/ubuntu") and post login message ("try cd ableC; ./build")
+* [ ] Create an outside VM README: "Here is how to start and use this VM"
+* [ ] Create a home directory README: "Here's what's in the homedir and what you can do."
+* [ ] Create a composition example: "Here is AbleC composed with several extensions, and an example file."
+
