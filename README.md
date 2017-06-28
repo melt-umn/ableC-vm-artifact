@@ -33,15 +33,13 @@ vagrant halt
 
 Stops the VM without deleting it like `destroy` does.
 
-Then `~/VirtualBox VMs/ableC_artifact_vm` is the VM. TODO: Figure out how to distribute this.
+Then `~/VirtualBox VMs/ableC_artifact_vm` is the VM. I *think* we distribute this but just taring up this directory.
 
 TODO
 ----
 
 * [ ] Get all the AbleC extensions we want in here
-* [ ] Configure a default password for users starting the VM via virtual box instead of vagrant (i.e. the artifact reviewers)
-* [ ] Add a pre-login message ("login as ubuntu/ubuntu") and post login message ("try cd ableC; ./build")
 * [ ] Create an outside VM README: "Here is how to start and use this VM"
-* [ ] Create a home directory README: "Here's what's in the homedir and what you can do."
+  * [ ] Related: consider figuring out how to configure virtual box so you can SSH in from a terminal after starting the vm, instead of having to use the kinda crummy virtual box console.
 * [ ] Create a composition example: "Here is AbleC composed with several extensions, and an example file."
 

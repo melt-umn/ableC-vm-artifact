@@ -9,7 +9,7 @@ fi
 # Download and set up Silver. (Presently using -latest.)
 
 wget -q http://melt.cs.umn.edu/downloads/silver-dev/silver-latest.tar.gz
-tar zxvf silver-latest.tar.gz
+tar zxf silver-latest.tar.gz
 mv silver-latest silver
 mkdir -p bin
 (cd silver && ./support/bin/install-silver-bin)

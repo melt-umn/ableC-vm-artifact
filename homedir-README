@@ -1,0 +1,15 @@
+
+You will find:
+
+ - Silver (and its Copper dependencies) appear in ~/silver
+ - AbleC appears in ~/ableC
+ - Several extensions appear in ~/extensions/{name}
+
+To start, try building ableC:
+
+    cd ~/ableC; ./build
+
+To try out an extension, for example:
+
+    cd ~/extensions/ableC-condition-tables; make
+
