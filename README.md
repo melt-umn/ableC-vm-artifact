@@ -8,29 +8,27 @@ vagrant box add ubuntu/xenial64
 
 This should install vagrant, virtual box, and then downloads the VM base image we're using.
 
-Clone this repo
----------------
+Creating a  VM image
+--------------------
+
+### Clone this repo
 Clone this repo and `cd` into it.
 
-Building VM
------------
-
+### Building VM
 ```
 vagrant up
 ```
+This references the `Vagrantfile` and constructs the VM and runs it in the background.
 
-Cleaning up
------------
-
+#### Test it
 ```
-vagrant destroy
+vagrant ssh
 ```
+This logs into the VM.  One can poke around and see that things work.  When finished, logout as usual with `exit` to return to the host OS.
 
-Deletes the VM and stuff
 
 Extracting VM
 -------------
-
 ```
 vagrant halt
 ```
@@ -38,6 +36,16 @@ vagrant halt
 Stops the VM without deleting it like `destroy` does.
 
 Then `~/VirtualBox VMs/ableC_artifact_vm` is the VM. I *think* we distribute this but just taring up this directory.
+
+
+Cleaning up
+-----------
+```
+vagrant destroy
+```
+This deletes the VM and stuff.
+
+
 
 TODO
 ----
