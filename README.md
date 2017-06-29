@@ -8,6 +8,10 @@ vagrant box add ubuntu/xenial64
 
 This should install vagrant, virtual box, and then downloads the VM base image we're using.
 
+Clone this repo
+---------------
+Clone this repo and `cd` into it.
+
 Building VM
 -----------
 
