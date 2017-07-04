@@ -20,6 +20,12 @@ vagrant up
 ```
 This references the `Vagrantfile` and constructs the VM and runs it in the background.
 
+If the bootstrap files are modified, run
+```
+vagrant provision
+```
+to get the to run again
+
 #### Test it
 ```
 vagrant ssh

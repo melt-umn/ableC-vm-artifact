@@ -22,7 +22,7 @@ git clone https://github.com/melt-umn/ableC.git
 
 # Get ableC sample projects repository
 
-git clone git@github.com:melt-umn/ableC_sample_projects.git
+git clone https://github.com/melt-umn/ableC_sample_projects.git
 rm -f ableC_sample_projects/Jenkinsfile
 
 
