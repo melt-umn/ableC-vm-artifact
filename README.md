@@ -55,9 +55,14 @@ This deletes the VM and stuff.
 
 TODO
 ----
-
+* [ ] ableC
+  * [ ] clear out extensions directory
+  * [ ] rewrite README.md in ableC repo
 * [ ] Get all the AbleC extensions we want in here
 * [ ] Create an outside VM README: "Here is how to start and use this VM"
   * [ ] Related: consider figuring out how to configure virtual box so you can SSH in from a terminal after starting the vm, instead of having to use the kinda crummy virtual box console.
-* [ ] Create a composition example: "Here is AbleC composed with several extensions, and an example file."
+* [ ] Create a composition examples
+  * [ ] parallel tree search
+  * [ ] 'down on the farm'
+  * [ ] transparent prefixes
 
