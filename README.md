@@ -66,3 +66,8 @@ TODO
   * [ ] 'down on the farm'
   * [ ] transparent prefixes
 
+* [ ] Getting Started
+
+* [ ] Step-by-step
+  * [ ] explain useless NT messages in closure since it uses the
+        parsing construction stuff...
