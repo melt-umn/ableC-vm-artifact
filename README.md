@@ -59,8 +59,7 @@ TODO
   * [ ] clear out extensions directory
   * [ ] rewrite README.md in ableC repo
 * [ ] Get all the AbleC extensions we want in here
-* [ ] Create an outside VM README: "Here is how to start and use this VM"
-  * [ ] Related: consider figuring out how to configure virtual box so you can SSH in from a terminal after starting the vm, instead of having to use the kinda crummy virtual box console.
+* [ ] (Optional) Figure out how to compact the VM image more. (Currently 800MB, probably could be 5-600.)
 * [ ] Create a composition examples
   * [ ] parallel tree search
   * [ ] 'down on the farm'
