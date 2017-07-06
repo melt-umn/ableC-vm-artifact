@@ -13,6 +13,7 @@ tar zxf silver-latest.tar.gz
 mv silver-latest silver
 mkdir -p bin
 (cd silver && ./support/bin/install-silver-bin)
+(cd silver/support/nailgun && ./install-sv-nailgun)
 rm silver-latest.tar.gz
 
 # get cilk libraries
@@ -28,6 +29,7 @@ sudo cp cilk-usr_local/lib/cilk/* /usr/local/lib/cilk/
 sudo chmod o+r /usr/local/lib/cilk/*
 sudo cp cilk-usr_local/lib/lib* /usr/local/lib/
 sudo chmod o+r /usr/local/lib/lib*
+rm -rf cilk-usr_local*
 
 # Download and set up AbleC.
 
