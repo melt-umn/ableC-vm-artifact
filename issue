@@ -2,8 +2,13 @@
 ableC artifact virtual machine
 ------------------------------
 
-When starting the VM directly from Virtual Box, login using:
+Log in using:
 
 Username: ubuntu
 Password: ablec
+
+Note: We recommend using a terminal emulator and SSH, not Virtual Box's console.
+By default, your host has a port forwarded:
+
+ssh ubuntu@127.0.0.1 -p 2222
 
