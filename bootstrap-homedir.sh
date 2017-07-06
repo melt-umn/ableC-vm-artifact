@@ -51,6 +51,9 @@ git clone https://github.com/melt-umn/ableC-closure.git
 git clone https://github.com/melt-umn/ableC-condition-tables.git
 git clone https://github.com/melt-umn/ableC-cilk.git
 git clone https://github.com/melt-umn/ableC-halide.git
+git clone https://github.com/melt-umn/ableC-sqlite.git
+git clone https://github.com/melt-umn/ableC-regex-lib.git
+git clone https://github.com/melt-umn/ableC-regex-pattern-matching.git
 git clone https://github.com/melt-umn/ableC-templating.git
 
 #rm -f */Jenkinsfile

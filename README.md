@@ -70,3 +70,6 @@ TODO
 * [ ] Step-by-step
   * [ ] explain useless NT messages in closure since it uses the
         parsing construction stuff...
+
+* [ ] rm cilk-usr_local from homedir in provisioning script
+* [ ] read paper and get more exts - intervals...
