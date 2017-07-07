@@ -63,6 +63,9 @@ TODO
 
 * [ ] (Optional) Figure out how to compact the VM image more. (Currently 800MB, probably could be 5-600.)
 
+* [ ] Extensions
+  * [ ] get them to have the same format, some new regex ones don't
+
 * [ ] Create a composition examples
   * [ ] parallel tree search
   * [ ] 'down on the farm'

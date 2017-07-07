@@ -7,7 +7,7 @@ mv /home/ubuntu/issue /etc/issue
 
 apt-get update
 apt-get install -y openjdk-8-jdk-headless ant git build-essential nailgun 
-apt-get install -y libgc-dev emacs
+apt-get install -y libgc-dev sqlite3 libsqlite3-dev
 
 # People are going to be using this VM right? Should we consider vim/emacs?
 
