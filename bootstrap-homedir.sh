@@ -8,6 +8,7 @@ fi
 
 # Download and set up Silver. (Presently using -latest.)
 
+echo "Downloading an installing Silver..."
 wget -q http://melt.cs.umn.edu/downloads/silver-dev/silver-latest.tar.gz
 tar zxf silver-latest.tar.gz
 mv silver-latest silver
@@ -17,6 +18,7 @@ mkdir -p bin
 rm silver-latest.tar.gz
 
 # get cilk libraries
+echo "Downloading Cilk libraries"
 wget -q http://melt.cs.umn.edu/downloads/cilk-usr_local.tar.gz
 tar zxf cilk-usr_local.tar.gz
 sudo mkdir -p /usr/local/include/cilk

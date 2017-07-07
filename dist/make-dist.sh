@@ -20,12 +20,13 @@ vagrant halt
 
 # reconfigure before copy: remove references to files on the local system.
 
-# A UART is necessary for the VM to boot,s o just "disconnect" it from anything.
+# A UART is necessary for the VM to boot, so just "disconnect" it from anything.
 VBoxManage modifyvm ableC_artifact_vm --uartmode1 disconnected
 # Remove vagrant-specific configuration
 VBoxManage sharedfolder remove ableC_artifact_vm --name vagrant
 
 # Hope you have an SSD! WEEEEEEEEeeeeee
+echo "Performing expensive copy of VM. Takes awhile."
 cp -r ~/VirtualBox\ VMs/ableC_artifact_vm dist/
 
 # Remove vagrant's copy.
@@ -47,6 +48,7 @@ cp ../Getting-Started-Guide.md ableC_artifact/
 cp ../Step-by-Step-Instructions.md ableC_artifact/
 mv ableC_artifact_vm ableC_artifact/
 
+echo "Compressing..."
 tar zcf ableC_artifact.tar.gz ableC_artifact/
 
 echo "artifact ready: ableC_artifact.tar.gz  or already uncompressed: ableC_artifact"
