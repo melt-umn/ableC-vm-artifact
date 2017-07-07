@@ -58,8 +58,11 @@ TODO
 * [ ] ableC
   * [ ] clear out extensions directory
   * [X] rewrite README.md in ableC repo (MAYBE done -- needs review?)
+
 * [ ] Get all the AbleC extensions we want in here
+
 * [ ] (Optional) Figure out how to compact the VM image more. (Currently 800MB, probably could be 5-600.)
+
 * [ ] Create a composition examples
   * [ ] parallel tree search
   * [ ] 'down on the farm'

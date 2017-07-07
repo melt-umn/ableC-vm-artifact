@@ -41,8 +41,10 @@ rm ableC_artifact_vm/*-prev
 rm -rf ableC_artifact_vm/Logs
 
 # Create the thing we tar up
-mkdir ableC_artifact
+mkdir -p ableC_artifact
 cp distributable-README.md ableC_artifact/README.md
+cp ../Getting-Started-Guide.md ableC_artifact/
+cp ../Step-by-Step-Instructions.md ableC_artifact/
 mv ableC_artifact_vm ableC_artifact/
 
 tar zcf ableC_artifact.tar.gz ableC_artifact/
