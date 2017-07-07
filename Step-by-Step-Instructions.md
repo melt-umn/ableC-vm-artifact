@@ -107,7 +107,7 @@ will build an `ableC.jar` artifact and test all the examples.
 
 
 
-### Using the extensions in a sample project.
+### Using the extensions in a sample "parallel-tree-search" project 
 
 Satisfied that extension might be useful, the programmer could use
 them all in a single program.
@@ -120,14 +120,77 @@ cd ~/ableC_sample_projects/parallel_tree_search
 
 To compose these language extensions together the programmer needs to
 write a short specification file to name the desired language
-extensions and 
-and 
+extensions and use Silver to compile this specification into an
+`ableC.jar` file that is implementation of the translator for this
+custom extended version of C.
 
-Parallel-tree-search.
+For this project, this specification can be found in
+`artifact/Artifact.sv`.  This is a boiler-plate Silver specification.
+The only parts that a programmer would need to edit are between the
+curly-braces after `parser extendedParser :: cst:Root`.
 
-1. build artifact
-2. compile pts.xc
-3. run it
+The paper describes a small extension composition DSL that eliminates
+the surrounding boiler-plate Silver code.  We decided to eschew that
+DSL for the artifact since it is not so useful and seeing the actual
+Silver code strengthens, we believe, our claim that composing language
+extensions is (nearly) automatic and reliable if the MDA and MWDA
+pass for all extensions.
+
+Let's now consider the contents of this file inside the specified
+curly braces.
+
+One should first notice the first 5 lines which indicate the language
+specifications that are to be composed.  These include the AbleC host
+language on the first line, `edu:umn:cs:melt:ableC:concretesyntax`.  
+The next 4 are the extensions to be used in this project.
+
+Both the algebraic datatypes and the regular expression extension
+introduce a new "marking" terminal `match`.   As the paper describes,
+this is a lexical ambiguity.  It is easy for the progarmmer to
+disambiguate it.  No other lexical ambiguities are possible.
+
+The `prefix with` clause give the string that will precede the
+ambiguous `match` keyword if the default one is not used.  In the
+`pts.xc` file on line 64 you will see a comment showing how one would
+write `RX::match` to indicate that the regular expression `match`
+keyword was meant, not the `match` keyword from the algebraic datatype
+extension that appears on line 55.
+
+The example currently uses the extension-introduced infix operator
+`=~`.
+
+Feel free to try both version of the condition on line 61: the one
+there now or the one in the comment.
+
+The final bit, on line 17 of `Artifact.sv` determines which `match`
+keyword is the default one.  What is written now indicates that the
+algebraic datatype `match` is preferred over the regex `match.
+Unfortunately the full name of the offending terminal symbol must be
+typed here.
+
+To build this artifact, make sure you are in the
+`parallel-tree-search` directory and type
+```
+make ableC.jar
+```
+then compile the sample program with
+```
+make pts.out
+```
+then run it with
+```
+./pts.out -nproc 4
+```
+
+This can be repeated for any changes to the `Artifact.sv` or `pts.xc`
+files that are mad.e
+
+
+### The "down-on-the-farm" project
+
+Same structure as parallel-tree search
+
+feel free to play with it...
 
 
 
