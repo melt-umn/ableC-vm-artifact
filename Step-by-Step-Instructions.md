@@ -188,14 +188,77 @@ files that are mad.e
 
 ### The "down-on-the-farm" project
 
-Same structure as parallel-tree search
+As discussed in the Getting-Started-Guide, this example is a rather
+contrived accounting example for a farm.  Information about animals is
+stored in an SQLite3 database which the accounting program reads.
+This `accounting.xc` program also uses extensions that introduce
+algebraic datatype, condition tables, and regular expression matching.
 
-feel free to play with it...
+Be sure to have completed the steps in the Getting-Started-Guide for
+this project first.  After that, return to this document.
+
+Again, take a look at the `artfact/Artifact.sv` file.  It has a form
+very similar to the one from the parallel-tree-search.  You can see
+that it is only the bits between the curly braces after the `parser`
+construct that changes.
+
+This sample is divided up into 6 steps.  It forms a demonstration that
+we've given a few times and evolves the programs starting with
+`accounting-step1.xc` up the final version in `accounting-step6.xc`.
+(Note that `accounting.xc` is just a copy of the final
+`accounting-step6.xc` version.)
+
+Looking at `accounting.xc` one can see uses of the SQLite, algebraic
+datatypes, regular expressions, and condition-tables extension.  The
+constructs introduced by the extensions are discussed in the body and
+appendices of the paper.
+
+It provides another example of a composition of several different
+language extensions.
 
 
 
 
 ## From the extension developer's perspective
+
+The second perspective from which to consider AbleC is from that of
+the person developing language extensions.
+
+There are many aspects to writing language extensions for C, in
+AbleC.  In order to keep the evaluation process a reasonable one we
+focus on just a few aspects of writing extensions here.
+
+1. concrete syntax
+
+   show a bit of condition tables,
+
+2. abstract syntax
+
+   same
+
+3. examples
+  
+   consider the `altitude_switch.xc` example.
+
+   Extension designers may create similar examples to illustrate what
+   they perceive are the useful features of their extension.
+
+4. Analysis
+   consider files for MDA and MWDA
+
+
+
+Then advanced stuff, consider the tutorials.  These are in
+`~/ableC/tutorials` or online in their rendered HMTL form at
+https://github.com/melt-umn/ableC/tree/develop/tutorials
+
+
+
+New infix operators
+
+Operator overloading for intervals
+
+
 
 mention all the automatic includes ...
 
