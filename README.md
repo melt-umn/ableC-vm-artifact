@@ -56,10 +56,10 @@ This deletes the VM and stuff.
 TODO
 ----
 * [ ] ableC
-  * [ ] clear out extensions directory
+  * [X] clear out extensions directory
   * [X] rewrite README.md in ableC repo (MAYBE done -- needs review?)
 
-* [ ] Get all the AbleC extensions we want in here
+* [X] Get all the AbleC extensions we want in here
 
 * [ ] (Optional) Figure out how to compact the VM image more. (Currently 800MB, probably could be 5-600.)
 
@@ -69,12 +69,19 @@ TODO
 * [ ] Create a composition examples
   * [ ] parallel tree search
   * [ ] 'down on the farm'
-  * [ ] transparent prefixes - remove this
+  * [X] transparent prefixes - remove this
 
-* [ ] Getting Started
+* [X] Getting Started
 
 * [ ] Step-by-step
   * [ ] explain useless NT messages in closure since it uses the
         parsing construction stuff...
 
 * [ ] read paper and get more exts - intervals...
+
+
+Keep in mind:
+
+"The AEC strives to place itself in the shoes of such future
+researchers and then to ask: how much would this artifact have helped
+me?" 

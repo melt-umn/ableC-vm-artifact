@@ -36,7 +36,7 @@ rm -rf cilk-usr_local*
 # Download and set up AbleC.
 
 git clone https://github.com/melt-umn/ableC.git
-
+rm -Rf ~/ableC/extensions
 
 # Get ableC sample projects repository
 

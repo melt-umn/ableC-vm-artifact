@@ -39,9 +39,14 @@ ablec
 
 #### Verify directory contents
 
-Running `ls` in the home directory should list the following:
-
-TODO: complete this list
+Running `ls` in the home directory should list the following
+directories:
+`ableC`,
+`ableC_sample_projects`,
+`bin`,
+`extensions`
+`README`, and
+`silver`.
 
 
 ## Basic testing
@@ -56,7 +61,7 @@ disregard these.
 
 ### The parallel-tree-search example
 
-Change to the `ableC_sample_projects/parallel_tree_search` directory
+Change to the `~/ableC_sample_projects/parallel_tree_search` directory
 and run
 ```
 make ableC.jar
