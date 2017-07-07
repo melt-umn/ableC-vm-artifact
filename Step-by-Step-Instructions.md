@@ -7,6 +7,8 @@ researchers and then to ask: how much would this artifact have helped
 me?" 
 
 
+mention all the automatic includes ...
+
 ## From the programmer's perspective
 
 Parallel-tree-search.

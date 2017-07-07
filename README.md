@@ -69,7 +69,7 @@ TODO
 * [ ] Create a composition examples
   * [ ] parallel tree search
   * [ ] 'down on the farm'
-  * [ ] transparent prefixes
+  * [ ] transparent prefixes - remove this
 
 * [ ] Getting Started
 
