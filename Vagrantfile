@@ -28,4 +28,10 @@ Vagrant.configure(2) do |config|
   
   # Set up what we want in the home directory of the VM
   config.vm.provision "shell", path: "bootstrap-homedir.sh", privileged: false
+
+  # Instead of calling bootstrap-homedir.sh,
+  # run `install-ableC-bundle`
+  # run `install-cilk-libs`
+  # So basically separate these tasks out.  
+
 end
