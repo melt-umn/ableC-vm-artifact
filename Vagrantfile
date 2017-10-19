@@ -27,11 +27,15 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "bootstrap.sh"
   
   # Set up what we want in the home directory of the VM
-  config.vm.provision "shell", path: "bootstrap-homedir.sh", privileged: false
+  # config.vm.provision "shell", path: "bootstrap-homedir.sh", privileged: false
 
+
+  config.vm.provision "file", source: "install-ableC-bundle.sh", destination: "install-ableC-bundle.sh"
+  config.vm.provision "file", source: "install-cilk-libs.sh", destination: "install-cilk-libs.sh"
+  config.vm.provision "file", source: "mk-tarballs.sh", destination: "mk-tarballs.sh"
   # Instead of calling bootstrap-homedir.sh,
-  # run `install-ableC-bundle`
-  # run `install-cilk-libs`
-  # So basically separate these tasks out.  
+  config.vm.provision "shell", path: "install-ableC-bundle.sh", privileged: false
+  config.vm.provision "shell", path: "install-cilk-libs.sh", privileged: false  
+
 
 end

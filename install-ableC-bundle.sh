@@ -46,13 +46,13 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-interval.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-halide.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-string.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-sqlite.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-lib.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-pattern-matching.git
+git clone https://github.com/melt-umn/ableC-regex-lib.git
+git clone https://github.com/melt-umn/ableC-regex-pattern-matching.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 
 
 # Get ableC sample projects repository
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC_sample_projects.git
+git clone https://github.com/melt-umn/ableC_sample_projects.git
 
 #rm -f */Jenkinsfile   ?
 
