@@ -51,12 +51,12 @@ git clone https://github.com/melt-umn/ableC-regex-pattern-matching.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 
 
-# Get ableC sample projects repository
-git clone https://github.com/melt-umn/ableC_sample_projects.git
-
 #rm -f */Jenkinsfile   ?
 
 cd ..
+
+# Get ableC sample projects repository
+git clone https://github.com/melt-umn/ableC_sample_projects.git
 
 # Anything else?
 
