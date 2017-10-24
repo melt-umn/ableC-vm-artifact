@@ -31,6 +31,7 @@ Vagrant.configure(2) do |config|
 
 
   config.vm.provision "file", source: "install-ableC-bundle.sh", destination: "install-ableC-bundle.sh"
+  config.vm.provision "file", source: "update-ableC-bundle.sh", destination: "update-ableC-bundle.sh"
   config.vm.provision "file", source: "install-cilk-libs.sh", destination: "install-cilk-libs.sh"
   config.vm.provision "file", source: "mk-tarballs.sh", destination: "mk-tarballs.sh"
   # Instead of calling bootstrap-homedir.sh,

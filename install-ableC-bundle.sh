@@ -4,7 +4,7 @@
 # required packages.
 
 # name of directory in which to install Silver and ableC.
-if [ $# -gt 0 ]; then
+if [[ $# > 0 ]]; then
     INSTALLDIR=$1
 else
     INSTALLDIR="ableC-bundle"
@@ -17,7 +17,7 @@ BRANCH="develop"
 
 set -eu
 
-if [ -d ${INSTALLDIR} ]; then
+if [[ -d ${INSTALLDIR} ]]; then
     rm -rf ${INSTALLDIR}/silver
     rm -rf ${INSTALLDIR}/ableC
     rm -rf ${INSTALLDIR}/ableC_sample_projects
