@@ -4,7 +4,13 @@
 # required packages.
 
 # name of directory in which to install Silver and ableC.
-INSTALLDIR="ableC-bundle"
+if [ $# -gt 0 ]; then
+    INSTALLDIR=$1
+else
+    INSTALLDIR="ableC-bundle"
+fi
+
+echo "Installing ableC bundle into ${INSTALLDIR}..."
 
 # branches to install   - change to "master" later
 BRANCH="develop"
