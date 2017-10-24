@@ -18,12 +18,15 @@ BRANCH="develop"
 set -eu
 
 if [ -d ${INSTALLDIR} ]; then
-  rm -rf ${INSTALLDIR}
+    rm -rf ${INSTALLDIR}/silver
+    rm -rf ${INSTALLDIR}/ableC
+    rm -rf ${INSTALLDIR}/ableC_sample_projects
+    rm -rf ${INSTALLDIR}/extensions
+else
+    mkdir -p ${INSTALLDIR}
 fi
 
-mkdir ${INSTALLDIR}
 cd ${INSTALLDIR}
-
 
 # Download and set up Silver.
 git clone -b ${BRANCH} https://github.com/melt-umn/silver.git
