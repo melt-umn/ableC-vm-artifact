@@ -10,7 +10,7 @@ else
 fi
 
 if [ ! -d ${INSTALLDIR} ]; then
-    echo "Bundle directory ${INSTALLDIR} does not exist"
+    echo "error: Bundle directory ${INSTALLDIR} does not exist"
     exit 1
 fi
 
