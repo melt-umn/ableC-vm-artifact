@@ -3,7 +3,7 @@
 # See `bootstraph.sh` in `ableC-vm-artifact` repository for
 # required packages.
 
-# name of directory in which to install Silver and ableC.
+# Name of directory in which to install Silver and ableC.
 if [[ $# > 0 ]]; then
     INSTALLDIR=$1
 else

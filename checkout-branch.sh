@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # Checks out a given branch name
+
+# Get the branch to check out
 if [[ $# > 0 ]]; then
     BRANCH=$1
 else
@@ -10,9 +12,9 @@ fi
 # Branch to check out if an extension doesn't have a branch
 DEFAULT_BRANCH=develop
 
-# name of directory where ableC is installed
+# Name of directory where ableC is installed
 if [[ $# > 1 ]]; then
-    INSTALLDIR=$1
+    INSTALLDIR=$2
 elif [[ -d ableC && -d extensions ]]; then
     INSTALLDIR=.
 else

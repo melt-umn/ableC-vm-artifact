@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# name of directory where ableC is installed
+# Name of directory where ableC is installed
 if [[ $# > 0 ]]; then
     INSTALLDIR=$1
 elif [[ -d ableC && -d extensions ]]; then
