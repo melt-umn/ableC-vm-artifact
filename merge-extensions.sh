@@ -35,7 +35,14 @@ cd extensions
 for extdir in ableC-*
 do
     echo "Merging $extdir..."
-    (cd $extdir && git merge ${BRANCH})
+    (
+        cd $extdir
+        if ! git rev-parse --verify ${BRANCH} &> /dev/null; then
+            echo "Repo doesn't have branch ${BRANCH}, skipping."
+        else
+            git merge ${BRANCH}
+        fi
+    )
 done
 
 # If that went OK then push all the extensions
