@@ -29,14 +29,14 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-cd extensions
+REPOS="extensions/ableC-* ableC-*"
 
 # First merge all the extensions
-for extdir in ableC-*
+for dir in ${REPOS}
 do
-    echo "Merging $extdir..."
+    echo "Merging $dir..."
     (
-        cd $extdir
+        cd $dir
         if ! git rev-parse --verify ${BRANCH} &> /dev/null; then
             echo "Repo doesn't have branch ${BRANCH}, skipping."
         else
@@ -46,8 +46,8 @@ do
 done
 
 # If that went OK then push all the extensions
-for extdir in ableC-*
+for dir in ${REPOS}
 do
-    echo "Pushing $extdir..."
-    (cd $extdir && git push)
+    echo "Pushing $dir..."
+    (cd $dir && git push)
 done

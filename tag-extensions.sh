@@ -26,20 +26,29 @@ fi
 
 cd ${INSTALLDIR}
 
+cd extensions
 
 TAG_NAME=ableC-${ABLEC_VERSION}
-
-cd extensions
-for extdir in ableC-*
+REPOS="ableC-*"
+# Safety check first... make sure we are on master
+for dir in ${REPOS}
 do
-    echo "Tagging $extdir..."
+    echo "Tagging $dir..."
     (
-        cd $extdir
-        # Safety check first... make sure we are on master
+        cd $dir
         if [[ $(git rev-parse --abbrev-ref HEAD) != master ]]; then
             echo "error: Not on branch master"
-        else
-            git tag ${TAG_NAME} && git push origin ${TAG_NAME}
+            exit 1
         fi
+    )
+done
+
+# Tag the extensions
+for dir in ${REPOS}
+do
+    echo "Tagging $dir..."
+    (
+        cd $dir
+        git tag ${TAG_NAME} && git push origin ${TAG_NAME}
     )
 done

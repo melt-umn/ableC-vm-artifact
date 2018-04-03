@@ -31,10 +31,10 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-CHECKOUTDIRS="silver ableC extensions/ableC-* ableC-sample-projects"
+REPOS="silver ableC extensions/ableC-* ableC-*"
 
 echo "Checking out branch ${BRANCH}"
-for dir in ${CHECKOUTDIRS}
+for dir in ${REPOS}
 do
     echo "Checking out for $dir..."
     (
