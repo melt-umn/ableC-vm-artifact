@@ -20,7 +20,7 @@ set -eu
 if [[ -d ${INSTALLDIR} ]]; then
     rm -rf ${INSTALLDIR}/silver
     rm -rf ${INSTALLDIR}/ableC
-    rm -rf ${INSTALLDIR}/ableC_sample_projects
+    rm -rf ${INSTALLDIR}/ableC-sample-projects
     rm -rf ${INSTALLDIR}/extensions
 else
     mkdir -p ${INSTALLDIR}
@@ -65,7 +65,7 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 cd ..
 
 # Get ableC sample projects repository
-git clone https://github.com/melt-umn/ableC_sample_projects.git
+git clone https://github.com/melt-umn/ableC-sample-projects.git
 
 # Anything else?
 
