@@ -35,7 +35,7 @@ done
 
 echo "Updating extensions..."
 cd extensions
-for dir in ableC-*
+for dir in silver-ableC ableC-*
 do
     echo "Updating $dir..."
     (cd $dir && git pull)

@@ -29,7 +29,7 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-REPOS="extensions/ableC-* ableC-*"
+REPOS="extensions/silver-ableC extensions/ableC-* ableC-*"
 
 # First merge all the extensions
 for dir in ${REPOS}

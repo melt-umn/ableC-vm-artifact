@@ -31,7 +31,7 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-REPOS="silver ableC extensions/ableC-* ableC-*"
+REPOS="silver ableC extensions/silver-ableC extensions/ableC-* ableC-*"
 
 echo "Checking out branch ${BRANCH}"
 for dir in ${REPOS}
