@@ -13,7 +13,7 @@ fi
 echo "Installing ableC bundle into ${INSTALLDIR}..."
 
 # branches to install
-BRANCH="master"
+BRANCH="develop"
 
 set -eu
 
