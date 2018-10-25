@@ -31,19 +31,17 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-CHECKOUTDIRS="silver ableC extensions/ableC-* ableC-sample-projects"
+REPOS="silver ableC extensions/silver-ableC extensions/ableC-* ableC-*"
 
 echo "Checking out branch ${BRANCH}"
-for dir in ${CHECKOUTDIRS}
+for dir in ${REPOS}
 do
     echo "Checking out for $dir..."
     (
         cd $dir
-        if ! git rev-parse --verify ${BRANCH} &> /dev/null; then
+        if ! git checkout ${BRANCH}; then
             echo "Repo doesn't have branch ${BRANCH}, checking out ${DEFAULT_BRANCH} instead."
             git checkout ${DEFAULT_BRANCH}
-        else
-            git checkout ${BRANCH}
         fi
     )
 done

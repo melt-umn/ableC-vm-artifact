@@ -13,7 +13,7 @@ fi
 echo "Installing ableC bundle into ${INSTALLDIR}..."
 
 # branches to install
-BRANCH="master"
+BRANCH="develop"
 
 set -eu
 
@@ -42,14 +42,15 @@ cd ..
 # To help keep VM size down, ableC is not pre-built.
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC.git
 
-
 # Download and set up the various extensions
 mkdir -p extensions
 cd extensions
 
+git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-algebraic-data-types.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-cilk.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-closure.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-refcount-closure.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-condition-tables.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-interval.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-halide.git
@@ -59,13 +60,24 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-lib.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-pattern-matching.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 
+# Download and setup silver-ableC
+git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
+cd silver-ableC
+
+./bootstrap-compile # TODO: Release the jars somewhere and download them from there instead of building fresh
+
+./support/bin/install-silver-bin
+
+cd ..
+
 
 #rm -f */Jenkinsfile   ?
 
 cd ..
 
-# Get ableC sample projects repository
+# Get ableC sample project repositories
 git clone https://github.com/melt-umn/ableC-sample-projects.git
+git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
 
 # Anything else?
 
