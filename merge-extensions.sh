@@ -40,7 +40,7 @@ do
         if ! git rev-parse --verify ${BRANCH} &> /dev/null; then
             echo "Repo doesn't have branch ${BRANCH}, skipping."
         else
-            git merge ${BRANCH}
+            git merge ${BRANCH} --no-ff
         fi
     )
 done

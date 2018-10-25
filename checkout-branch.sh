@@ -39,11 +39,9 @@ do
     echo "Checking out for $dir..."
     (
         cd $dir
-        if ! git rev-parse --verify ${BRANCH} &> /dev/null; then
+        if ! git checkout ${BRANCH}; then
             echo "Repo doesn't have branch ${BRANCH}, checking out ${DEFAULT_BRANCH} instead."
             git checkout ${DEFAULT_BRANCH}
-        else
-            git checkout ${BRANCH}
         fi
     )
 done
