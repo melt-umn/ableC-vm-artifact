@@ -29,7 +29,7 @@ cd ${INSTALLDIR}
 cd extensions
 
 TAG_NAME=ableC-${ABLEC_VERSION}
-REPOS="silver-ableC ableC-*"
+REPOS="silver-ableC ableC-* ../ableC-*"
 # Safety check first... make sure we are on master
 for dir in ${REPOS}
 do

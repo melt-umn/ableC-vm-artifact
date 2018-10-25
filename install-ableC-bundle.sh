@@ -46,6 +46,7 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC.git
 mkdir -p extensions
 cd extensions
 
+git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-algebraic-data-types.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-cilk.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-closure.git
@@ -74,8 +75,9 @@ cd ..
 
 cd ..
 
-# Get ableC sample projects repository
+# Get ableC sample project repositories
 git clone https://github.com/melt-umn/ableC-sample-projects.git
+git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
 
 # Anything else?
 
