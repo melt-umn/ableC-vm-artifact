@@ -46,7 +46,6 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC.git
 mkdir -p extensions
 cd extensions
 
-git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-algebraic-data-types.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-cilk.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-closure.git
