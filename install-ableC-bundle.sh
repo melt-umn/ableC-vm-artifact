@@ -66,7 +66,8 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-constructor.git
 git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
 cd silver-ableC
 
-./bootstrap-compile # TODO: Release the jars somewhere and download them from there instead of building fresh
+# ./bootstrap-compile
+./fetch-jars
 
 ./support/bin/install-silver-bin
 
