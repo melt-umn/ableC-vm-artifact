@@ -62,6 +62,7 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-sqlite.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-string.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-template-algebraic-data-types.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-tensor-algebra.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-vector.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-watch.git
 
