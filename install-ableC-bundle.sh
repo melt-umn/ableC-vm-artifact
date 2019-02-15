@@ -51,11 +51,12 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-check.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-checkTaggedUnion.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-cilk.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-closure.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-refcount-closure.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-condition-tables.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-interval.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-halide.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-interval.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-nonnull.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-prolog.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-refcount-closure.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-lib.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-pattern-matching.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-sqlite.git
@@ -63,6 +64,7 @@ git clone -b ${BRANCH} https://github.com/melt-umn/ableC-string.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-template-algebraic-data-types.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-tensor-algebra.git
+git clone -b ${BRANCH} https://github.com/melt-umn/ableC-unification.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-vector.git
 git clone -b ${BRANCH} https://github.com/melt-umn/ableC-watch.git
 
