@@ -26,6 +26,12 @@ cd ableC
 git pull
 cd ..
 
+echo "Updating silver-ableC..."
+cd extensions/silver-ableC
+git pull
+./fetch-jars
+cd ../..
+
 echo "Updating ableC projects..."
 for dir in ableC-*
 do
@@ -35,7 +41,7 @@ done
 
 echo "Updating extensions..."
 cd extensions
-for dir in silver-ableC ableC-*
+for dir in ableC-*
 do
     echo "Updating $dir..."
     (cd $dir && git pull)
