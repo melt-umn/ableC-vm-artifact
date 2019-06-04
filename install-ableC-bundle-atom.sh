@@ -16,7 +16,13 @@ fi
 echo "Installing ableC bundle into ${INSTALLDIR}..."
 
 # branches to install, this changes frequently below
-BRANCH="feature/treesitter"
+SILVER_BRANCH="feature/treesitter"
+SILVER_IDE_BRANCH="master"
+ABLEC_BRANCH="feature/ide_support"
+SILVER_ABLEC_BRANCH="feature/treesitter"
+EXT_IDE_BRANCH="feature/ide-support"
+EXT_BRANCH="develop"
+SAMPLE_PROJECT_BRANCH="feature/ide-support"
 
 set -eu
 
@@ -34,12 +40,14 @@ cd ${INSTALLDIR}
 
 
 # Download and set up Silver.
-git clone -b ${BRANCH} https://github.com/melt-umn/silver.git
+git clone -b ${SILVER_BRANCH} https://github.com/melt-umn/silver.git
 cd silver
 source update
 
+# Compile the version of Treesitter using this branch
 ./self-compile
 cp build/silver.composed.Default.jar jars/
+
 
 mkdir -p ~/bin
 rm -f ~/bin/silver ~/bin/silver-custom
@@ -50,62 +58,55 @@ cd ..
 
 
 # Get Silver IDE tools
-git clone git@github.com:melt-umn/silver-ide.git
+git clone -b ${SILVER_IDE_BRANCH} https://github.com/melt-umn/silver-ide.git
 cd silver-ide
 
-# I had to do this explicitly.
-mkdir -p jars
-
 ./build-everything
-
-exit 999
+cd ..
 
 # Download and set up ableC.
 # To help keep VM size down, ableC is not pre-built.
-BRANCH="feature/ide_support"
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC.git
+git clone -b ${ABLEC_BRANCH} https://github.com/melt-umn/ableC.git
 
 # Download and set up the various extensions
 mkdir -p extensions
 cd extensions
 
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-algebraic-data-types.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-cilk.git
-
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-lib.git
+git clone -b ${EXT_IDE_BRANCH} https://github.com/melt-umn/ableC-algebraic-data-types.git
+git clone -b ${EXT_IDE_BRANCH} https://github.com/melt-umn/ableC-cilk.git
+git clone -b ${EXT_IDE_BRANCH} https://github.com/melt-umn/ableC-regex-lib.git
 
 # The repositories below do not have treesitter branches
-BRANCH="develop"
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-check.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-checkTaggedUnion.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-closure.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-condition-tables.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-constructor.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-halide.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-interval.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-nonnull.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-prolog.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-refcount-closure.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-regex-pattern-matching.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-rewriting.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-sqlite.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-string.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-templating.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-template-algebraic-data-types.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-tensor-algebra.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-unification.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-vector.git
-git clone -b ${BRANCH} https://github.com/melt-umn/ableC-watch.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-check.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-checkTaggedUnion.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-closure.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-condition-tables.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-constructor.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-halide.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-interval.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-nonnull.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-prolog.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-refcount-closure.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-regex-pattern-matching.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-rewriting.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-sqlite.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-string.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-templating.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-template-algebraic-data-types.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-tensor-algebra.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-unification.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-vector.git
+git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-watch.git
 
-
-BRANCH="develop"
 
 # Download and setup silver-ableC
-git clone -b ${BRANCH} https://github.com/melt-umn/silver-ableC.git
+git clone -b ${SILVER_ABLEC_BRANCH} https://github.com/melt-umn/silver-ableC.git
 cd silver-ableC
 
 # ./bootstrap-compile
 ./fetch-jars
+# compile in this branch as it is different from the one on jars
+./self-compile
 
 ./support/bin/install-silver-bin
 
@@ -117,7 +118,11 @@ cd ..
 cd ..
 
 # Get ableC sample project repositories
-git clone https://github.com/melt-umn/ableC-sample-projects.git
+git clone -b ${SAMPLE_PROJECT_BRANCH} https://github.com/melt-umn/ableC-sample-projects.git
+
+cd ableC-sample-projects/parallel_tree_search
+sed s/NPM_USERNAME=YOUR_NAME_HERE/NPM_USERNAME=joeblanchard/
+make atom-ide-demo
 
 # git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
 
