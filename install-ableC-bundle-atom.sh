@@ -105,13 +105,15 @@ git clone -b ${EXT_BRANCH} https://github.com/melt-umn/ableC-watch.git
 
 
 # Download and setup silver-ableC
-git clone -b ${SILVER_ABLEC_BRANCH} https://github.com/melt-umn/silver-ableC.git
+git clone -b ${SILVER_AB1LEC_BRANCH} https://github.com/melt-umn/silver-ableC.git
 cd silver-ableC
 
 # ./bootstrap-compile
 ./fetch-jars
 # compile in this branch as it is different from the one on jars
 ./self-compile
+
+rm -f ~/bin/silver-ableC
 
 ./support/bin/install-silver-bin
 
