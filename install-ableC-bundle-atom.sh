@@ -126,7 +126,6 @@ cd ..
 git clone -b ${SAMPLE_PROJECT_BRANCH} https://github.com/melt-umn/ableC-sample-projects.git
 
 cd ableC-sample-projects/parallel_tree_search
-sed s/NPM_USERNAME=YOUR_NAME_HERE/NPM_USERNAME=joeblanchard/
 make update-spec-demo
 make update-spec
 
