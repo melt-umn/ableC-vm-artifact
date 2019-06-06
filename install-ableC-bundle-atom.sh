@@ -61,6 +61,8 @@ cd ..
 git clone -b ${SILVER_IDE_BRANCH} https://github.com/melt-umn/silver-ide.git
 cd silver-ide
 
+rm -f gen-atom-language-package gen-treesitter-parser slide
+
 ./build-everything
 cd ..
 
