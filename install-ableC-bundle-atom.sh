@@ -117,6 +117,11 @@ cd ..
 
 cd ..
 
+git clone https://github.com/melt-umn/Dockerfiles.git
+cd Dockerfiles
+docker build -t melt-umn/ablec-sample-projects ableC-sample-projects-container
+cd ..
+
 # Get ableC sample project repositories
 git clone -b ${SAMPLE_PROJECT_BRANCH} https://github.com/melt-umn/ableC-sample-projects.git
 
