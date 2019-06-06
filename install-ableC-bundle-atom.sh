@@ -122,7 +122,8 @@ git clone -b ${SAMPLE_PROJECT_BRANCH} https://github.com/melt-umn/ableC-sample-p
 
 cd ableC-sample-projects/parallel_tree_search
 sed s/NPM_USERNAME=YOUR_NAME_HERE/NPM_USERNAME=joeblanchard/
-make atom-ide-demo
+make update-spec-demo
+make update-spec
 
 # git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
 
