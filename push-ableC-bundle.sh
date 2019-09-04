@@ -16,33 +16,32 @@ fi
 
 cd ${INSTALLDIR}
 
-echo "Updating Silver..."
+echo "Pushing Silver..."
 cd silver
-source update
+git push
 cd ..
 
-echo "Updating ableC..."
+echo "Pushing ableC..."
 cd ableC
-git pull
+git push
 cd ..
 
-echo "Updating silver-ableC..."
+echo "Pushing silver-ableC..."
 cd extensions/silver-ableC
-git pull
-./fetch-jars
+git push
 cd ../..
 
-echo "Updating ableC projects..."
+echo "Pushing ableC projects..."
 for dir in ableC-*
 do
-    echo "Updating $dir..."
-    (cd $dir && git pull)
+    echo "Pushing $dir..."
+    (cd $dir && git push)
 done
 
-echo "Updating extensions..."
+echo "Pushing extensions..."
 cd extensions
 for dir in ableC-*
 do
-    echo "Updating $dir..."
-    (cd $dir && git pull)
+    echo "Pushing $dir..."
+    (cd $dir && git push)
 done
