@@ -31,6 +31,11 @@ cd extensions/silver-ableC
 git push
 cd ../..
 
+echo "Pushing ableP..."
+cd ableP
+git push
+cd ..
+
 echo "Pushing ableC projects..."
 for dir in ableC-*
 do

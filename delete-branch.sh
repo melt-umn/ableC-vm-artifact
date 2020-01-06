@@ -28,7 +28,7 @@ cd ${INSTALLDIR}
 # Abort on failure
 set -e
 
-REPOS="silver ableC extensions/silver-ableC extensions/ableC-* ableC-*"
+REPOS="silver ableC extensions/silver-ableC extensions/ableC-* ableC-* ableP"
 
 echo "Deleting remote branch ${BRANCH}"
 for dir in ${REPOS}

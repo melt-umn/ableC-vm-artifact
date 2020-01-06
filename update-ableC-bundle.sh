@@ -32,6 +32,11 @@ git pull
 ./fetch-jars
 cd ../..
 
+echo "Updating ableP..."
+cd ableP
+git pull
+cd ..
+
 echo "Updating ableC projects..."
 for dir in ableC-*
 do
