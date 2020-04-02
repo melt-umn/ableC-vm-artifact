@@ -21,6 +21,7 @@ if [[ -d ${INSTALLDIR} ]]; then
     rm -rf ${INSTALLDIR}/silver
     rm -rf ${INSTALLDIR}/ableC
     rm -rf ${INSTALLDIR}/ableC-sample-projects
+    rm -rf ${INSTALLDIR}/ableP
     rm -rf ${INSTALLDIR}/extensions
 else
     mkdir -p ${INSTALLDIR}
@@ -88,8 +89,10 @@ cd ..
 
 # Get ableC sample project repositories
 git clone https://github.com/melt-umn/ableC-sample-projects.git
+git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
 
-# git clone https://github.com/melt-umn/ableC-nondeterministic-search-benchmarks.git
+# Get ableP for completeness, since it depends on ableC and is included in Jenkins downstream
+git clone https://github.com/melt-umn/ableP.git
 
 # Anything else?
 
